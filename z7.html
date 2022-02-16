@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<form onsubmit="return false" id="form">
+Текст:<br>
+<textarea id="text"></textarea><br>
+<button onclick="a()">Преобразовать</button><br>
+Преобразованный текст: <br>
+<textarea id="result" readonly="true"></textarea><br>
+</form>
+<script>
+	var text = document.forms.form.text;
+	var res = document.forms.form.result;
+
+	function a(){
+		res.value = "";
+		var txt = text.value;
+		while(txt){
+			res.value += txt.substring(0, 15)+"\n";
+			txt = txt.substring(15);
+		}
+	}
+
+</script>
+</html>

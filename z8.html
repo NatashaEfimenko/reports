@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<form onsubmit="return false" id="form">
+<button onclick="inputNumber()">Нажмите чтобы ввести число</button><br>
+<input id="result" readonly="true"><br>
+</form>
+<script>
+	function inputNumber() {
+		var numb = 0;
+		while( numb <= 100 && numb != undefined){
+			numb = prompt("Введите число больше 100");
+		}
+		document.forms.form.result.value = numb;
+	}
+</script>
+</html>

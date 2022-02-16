@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<form onsubmit="return false" id="form">
+Введите текст:<br>
+<textarea id="text"></textarea><br>
+Введите слово, количество вхождений которого, нужно подсчитать:<br>
+<input id="word"><br>
+<button onclick="a()">Подсчитать</button><br>
+Кол-во вхождений: <br>
+<input id="result" readonly="true"><br>
+</form>
+<script>
+	var text = document.forms.form.text;
+	var word = document.forms.form.word;
+	var res = document.forms.form.result;
+	alert(str1.lastIndexOf('и '));
+
+	function a() {
+		var count = 0;
+		var pos = 0;
+		while(pos = text.value.indexOf(word.value, pos)+1) 
+		count++;
+		res.value = count;
+	}
+
+</script>
+</html>
